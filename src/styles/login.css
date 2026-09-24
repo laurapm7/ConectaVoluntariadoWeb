@@ -15,22 +15,23 @@
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
     width: 100%;
-    max-width: 420px;
-    padding: 15px 60px;
+    max-width: 470px;
+    padding: 20px 35px;
 }
 
 .login-logo {
-    width: 100px;
+    width: 90px;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
+    margin: 5px auto 10px;
 }
 
 .login-card h1 {
-    white-space: nowrap; 
+   line-height: 1;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0 0 25px;
     font-size: 45px;
     font-weight: bold;
     color: #3f573c;
@@ -40,27 +41,30 @@
     font-size: 20px;
     font-weight: bold;
     color:#904d06;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-align: center;
+    white-space: nowrap;
+    
 }
 
 .login-subtitle-second {
     font-size: 14.5px;
     color: #666;
     text-align: center;
+    line-height: 1.3;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 16px;
+    margin-top: 20px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     
 }
 
@@ -75,6 +79,13 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 2px 0 0;
+    text-align: left;
 }
 
 .login-form button {
@@ -96,4 +107,10 @@
     margin-top: 40px;
     font-weight: bold;
     font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .login-subtitle-first {
+        font-size: 16px;
+    }
 }
