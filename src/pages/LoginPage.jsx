@@ -4,16 +4,19 @@ import { useState } from "react";
 
  function validateEmail(email){
     const cleanEmail = email.trim();
-        if(cleanEmail.trim() === "") {
+        if(cleanEmail === "") {
             return "El correo electrónico es obligatorio";
+        }else if(!cleanEmail.includes("@")){
+            return "El correo debe contener @";
         }
         return "";
     }
 
-    function validatePassword(password){
-        if(password.trim() === ""){
+function validatePassword(password){
+    const cleanPassword = password.trim();
+        if(cleanPassword === ""){
             return "La contraseña es obligatoria"
-        }else if(password.length<5){
+        }else if(cleanPassword.length<5){
             return "La contraseña debe tener al menos 5 caracteres"
         }
         return "";
